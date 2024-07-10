@@ -4,17 +4,6 @@ Lumache - Python library for cooks and food lovers.
 
 __version__ = "0.1.0"
 
-from tqdm import tqdm
-import datetime
-from loguru import logger
-import pandas as pd
-
-from sources.wd_imf.parse import imf_api_endpoint_correction,wd_imf_cpi_all_countries_parse
-from sources.wd_imf.extract import (imf_api_data_endpoint,
-                                    wd_imf_cpi_all_countries_yoy_indicators,
-                                    wd_imf_cpi_all_countries_mom_indicators,
-                                    wd_imf_cpi_all_countries_index_indicators)
-
 def wd_imf_cpi_all_countries_yoy_data(historical:bool=False):
     """
     Extracts data from all IMF CPI YOY indicators.
